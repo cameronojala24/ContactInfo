@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\models\\addcontactrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\models\\addcontactrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\models\\domain\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\data\\contactinfodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\data\\contactinfodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,49 +30,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AddContactRequestDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Models\\AddContactRequestDTO.cs",
-              "RelativeDocumentMoniker": "ContactInfo\\Models\\AddContactRequestDTO.cs",
-              "ToolTip": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Models\\AddContactRequestDTO.cs",
-              "RelativeToolTip": "ContactInfo\\Models\\AddContactRequestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T17:50:04.742Z",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ContactInfo\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ContactInfo\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-05T18:32:00.572Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ContactsController.cs",
               "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Controllers\\ContactsController.cs",
               "RelativeDocumentMoniker": "ContactInfo\\Controllers\\ContactsController.cs",
               "ToolTip": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Controllers\\ContactsController.cs",
               "RelativeToolTip": "ContactInfo\\Controllers\\ContactsController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAACIAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwCIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T17:39:50.762Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Program.cs",
               "RelativeDocumentMoniker": "ContactInfo\\Program.cs",
               "ToolTip": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Program.cs",
               "RelativeToolTip": "ContactInfo\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T17:28:30.204Z"
+              "WhenOpened": "2025-06-05T17:28:30.204Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ContactInfoDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Data\\ContactInfoDbContext.cs",
               "RelativeDocumentMoniker": "ContactInfo\\Data\\ContactInfoDbContext.cs",
@@ -80,12 +81,11 @@
               "RelativeToolTip": "ContactInfo\\Data\\ContactInfoDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T17:25:01.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T17:25:01.057Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Contact.cs",
               "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Models\\Domain\\Contact.cs",
               "RelativeDocumentMoniker": "ContactInfo\\Models\\Domain\\Contact.cs",
@@ -93,8 +93,7 @@
               "RelativeToolTip": "ContactInfo\\Models\\Domain\\Contact.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T17:20:44.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T17:20:44.971Z"
             }
           ]
         }
