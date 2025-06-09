@@ -7,23 +7,28 @@
 
       <div class="mt-2">
         <label for="name" class="font-bold">Name</label>
-        <input type="text" class="w-full p-2 rounded-sm mt-2" formControlName="name">
+        <input type="text" class="w-full p-2 rounded-sm mt-2 
+          outline outline-2 outline-slate-400 focus:outline-slate-600" formControlName="name">
       </div>
 
       <div class="mt-2">
         <label for="email" class="font-bold">Email</label>
-        <input type="email" class="w-full p-2 rounded-sm mt-2" formControlName="email">
+        <input type="email" class="w-full p-2 rounded-sm mt-2
+          outline outline-2 outline-slate-400 focus:outline-slate-600" formControlName="email">
       </div>
 
       <div class="mt-2">
         <label for="phone" class="font-bold">Phone</label>
-        <input type="text" class="w-full p-2 rounded-sm mt-2" formControlName="phone">
+        <input type="text" class="w-full p-2 rounded-sm mt-2
+          outline outline-2 outline-slate-400 focus:outline-slate-600" formControlName="phone">
       </div>
 
       <div class="mt-2">
         <label for="favorite" class="flex items-center font-bold">
           <span>Favorite</span>
-          <input type="checkbox" formControlName="favorite" class="h-4 w-4 ms-2">
+          
+          <input type="checkbox" formControlName="favorite" 
+            class="h-6 w-6 ms-2 outline-2 outline-slate-400 focus:outline-slate-600 rounded-sm">
         </label>
       </div>
 
@@ -53,13 +58,13 @@
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
                   </svg>
-                  <span class="ms-2">{{item.phone}}</span>
+                  <span class="ms-2">{{item.phoneNumber}}</span>
                 </span>
               </div>
 
               <div class="mt-4 flex w-full gap-4">
                 <a class="bg-emerald-500 py-1 px-2 rounded-sm cursor-pointer" 
-                href="{{'tel:' + item.phone}}">
+                href="{{'tel:' + item.phoneNumber}}">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
                   </svg>

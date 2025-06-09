@@ -19,7 +19,7 @@ export class AppComponent {
   contactsForm = new FormGroup({
     name: new FormControl<string>(''),
     email: new FormControl<string | null>(null),
-    phone: new FormControl<string>(''),
+    phoneNumber: new FormControl<string>(''),
     favorite: new FormControl<boolean>(false)
   });
 
@@ -29,7 +29,7 @@ export class AppComponent {
     const addContactRequest = {
       name: this.contactsForm.value.name,
       email: this.contactsForm.value.email,
-      phone: this.contactsForm.value.phone,
+      phoneNumber: this.contactsForm.value.phoneNumber,
       favorite: this.contactsForm.value.favorite,
     };
 
@@ -48,7 +48,7 @@ export class AppComponent {
     .subscribe({
       next: (value) => {
         alert('Item deleted')
-        this.contactsForm.reset();
+        this.contacts$ = this.getContacts();
       }
     });
   }

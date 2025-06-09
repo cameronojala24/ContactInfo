@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\models\\domain\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\models\\domain\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\models\\addcontactrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\models\\addcontactrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|c:\\users\\ojalaca.mfcgd\\desktop\\repos\\contactinfo\\api\\contactinfo\\contactinfo\\data\\contactinfodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{823F3432-9694-4BCE-B8D7-72B1EF4E8D5D}|ContactInfo\\ContactInfo.csproj|solutionrelative:contactinfo\\data\\contactinfodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +26,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ContactsController.cs",
-              "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Controllers\\ContactsController.cs",
-              "RelativeDocumentMoniker": "ContactInfo\\Controllers\\ContactsController.cs",
-              "ToolTip": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Controllers\\ContactsController.cs",
-              "RelativeToolTip": "ContactInfo\\Controllers\\ContactsController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwDcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ContactInfoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Data\\ContactInfoDbContext.cs",
+              "RelativeDocumentMoniker": "ContactInfo\\Data\\ContactInfoDbContext.cs",
+              "ToolTip": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Data\\ContactInfoDbContext.cs",
+              "RelativeToolTip": "ContactInfo\\Data\\ContactInfoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T19:37:37.489Z",
+              "WhenOpened": "2025-06-06T19:14:05.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Models\\Domain\\Contact.cs",
+              "RelativeDocumentMoniker": "ContactInfo\\Models\\Domain\\Contact.cs",
+              "ToolTip": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Models\\Domain\\Contact.cs",
+              "RelativeToolTip": "ContactInfo\\Models\\Domain\\Contact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:13:48.492Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ContactsController.cs",
+              "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Controllers\\ContactsController.cs",
+              "RelativeDocumentMoniker": "ContactInfo\\Controllers\\ContactsController.cs",
+              "ToolTip": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Controllers\\ContactsController.cs",
+              "RelativeToolTip": "ContactInfo\\Controllers\\ContactsController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T19:37:37.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AddContactRequestDTO.cs",
               "DocumentMoniker": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Models\\AddContactRequestDTO.cs",
               "RelativeDocumentMoniker": "ContactInfo\\Models\\AddContactRequestDTO.cs",
               "ToolTip": "C:\\Users\\ojalaca.MFCGD\\Desktop\\repos\\ContactInfo\\API\\ContactInfo\\ContactInfo\\Models\\AddContactRequestDTO.cs",
               "RelativeToolTip": "ContactInfo\\Models\\AddContactRequestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T19:37:25.072Z"
             }
