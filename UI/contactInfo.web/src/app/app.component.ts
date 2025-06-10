@@ -45,7 +45,7 @@ export class AppComponent {
       name: this.contactsForm.value.name,
       email: this.contactsForm.value.email,
       phoneNumber: this.contactsForm.value.phoneNumber,
-      favorite: this.contactsForm.value.favorite,
+      favorite: !!this.contactsForm.value.favorite,
     };
 
     if (this.isEditMode && this.editingContactId) {
@@ -92,7 +92,7 @@ export class AppComponent {
       name: contact.name,
       email: contact.email,
       phoneNumber: contact.phoneNumber,
-      favorite: contact.favorite
+      favorite: !!contact.favorite
     });
 
     this.isEditMode = true;
