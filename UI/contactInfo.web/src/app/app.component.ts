@@ -28,7 +28,6 @@ export class AppComponent {
     favorite: new FormControl<boolean>(false)
   });
 
-  contacts$ = this.getContacts();
   contacts: Contact[] = [];
 
   ngOnInit() {
@@ -54,8 +53,7 @@ export class AppComponent {
       this.http.put(`https://localhost:7117/api/Contacts/${this.editingContactId}`, contactData)
       .subscribe({
         next: () => {
-          this.contacts$ = this.getContacts();
-          this.contacts$.subscribe(data => {
+          this.getContacts().subscribe(data => {
             this.contacts = data;
           });
           this.contactsForm.reset();
@@ -68,8 +66,7 @@ export class AppComponent {
       this.http.post('https://localhost:7117/api/Contacts', contactData)
       .subscribe({
         next: () => {
-          this.contacts$ = this.getContacts();
-          this.contacts$.subscribe(data => {
+          this.getContacts().subscribe(data => {
             this.contacts = data;
           });
           this.contactsForm.reset();
@@ -83,8 +80,7 @@ export class AppComponent {
     .subscribe({
       next: (value) => {
         alert('Item deleted')
-        this.contacts$ = this.getContacts();
-        this.contacts$.subscribe(data => {
+        this.getContacts().subscribe(data => {
             this.contacts = data;
         });
       }

@@ -58,7 +58,7 @@
 
       <ul>
         @for (item of filteredContacts; track $index) {
-          <li class="p-2 bg-slate-100 border-b-2 border-slate-200">
+          <li class="p-2 mr-4 bg-slate-100 border-2 border-gray-400">
             <span class="font-light text-3xl flex items-center gap-2">
               {{item.name}}
               @if (item.favorite) {              
@@ -106,6 +106,10 @@
           </li>
         }
       </ul>
+
+      <p class="text-sm text-gray-500 mt-1 ms-2">
+        Showing {{ filteredContacts.length }} contact(s)
+      </p>
     } @else { 
       <div class="flex flex-col items-center justify-center text-center text-gray-500 mt-10">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
