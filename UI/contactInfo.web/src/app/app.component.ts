@@ -18,6 +18,8 @@ export class AppComponent {
 
   isEditMode = false;
   editingContactId: string | null = null;
+  
+  showFavoritesOnly = false;
 
   contactsForm = new FormGroup({
     name: new FormControl<string>(''),
@@ -27,37 +29,54 @@ export class AppComponent {
   });
 
   contacts$ = this.getContacts();
-  
-onFormSubmit() {
-  const contactData = {
-    name: this.contactsForm.value.name,
-    email: this.contactsForm.value.email,
-    phoneNumber: this.contactsForm.value.phoneNumber,
-    favorite: this.contactsForm.value.favorite,
-  };
+  contacts: Contact[] = [];
 
-  if (this.isEditMode && this.editingContactId) {
-    // Update existing contact
-    this.http.put(`https://localhost:7117/api/Contacts/${this.editingContactId}`, contactData)
-    .subscribe({
-      next: () => {
-        this.contacts$ = this.getContacts();
-        this.contactsForm.reset();
-        this.isEditMode = false;
-        this.editingContactId = null;
-      }
-    });
-  } else {
-    // Add new contact
-    this.http.post('https://localhost:7117/api/Contacts', contactData)
-    .subscribe({
-      next: () => {
-        this.contacts$ = this.getContacts();
-        this.contactsForm.reset();
-      }
+  ngOnInit() {
+    this.getContacts().subscribe(data => {
+      this.contacts = data;
     });
   }
-}
+  
+  get filteredContacts() {
+    return this.contacts?.filter(c => !this.showFavoritesOnly || c.favorite) || [];
+  }
+  
+  onFormSubmit() {
+    const contactData = {
+      name: this.contactsForm.value.name,
+      email: this.contactsForm.value.email,
+      phoneNumber: this.contactsForm.value.phoneNumber,
+      favorite: this.contactsForm.value.favorite,
+    };
+
+    if (this.isEditMode && this.editingContactId) {
+      // Update existing contact
+      this.http.put(`https://localhost:7117/api/Contacts/${this.editingContactId}`, contactData)
+      .subscribe({
+        next: () => {
+          this.contacts$ = this.getContacts();
+          this.contacts$.subscribe(data => {
+            this.contacts = data;
+          });
+          this.contactsForm.reset();
+          this.isEditMode = false;
+          this.editingContactId = null;
+        }
+      });
+    } else {
+      // Add new contact
+      this.http.post('https://localhost:7117/api/Contacts', contactData)
+      .subscribe({
+        next: () => {
+          this.contacts$ = this.getContacts();
+          this.contacts$.subscribe(data => {
+            this.contacts = data;
+          });
+          this.contactsForm.reset();
+        }
+      });
+    }
+  }
 
   onDelete(id: string) {
     this.http.delete(`https://localhost:7117/api/Contacts/${id}`)
@@ -65,6 +84,9 @@ onFormSubmit() {
       next: (value) => {
         alert('Item deleted')
         this.contacts$ = this.getContacts();
+        this.contacts$.subscribe(data => {
+            this.contacts = data;
+        });
       }
     });
   }
