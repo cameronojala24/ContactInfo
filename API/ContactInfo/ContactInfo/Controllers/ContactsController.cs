@@ -56,5 +56,26 @@ namespace ContactInfo.Controllers
 
             return Ok();
         }
+
+        [HttpPut]
+        [Route("{id:guid}")]
+        public IActionResult UpdateContact(Guid id, AddContactRequestDTO request)
+        {
+            var exisitingContact = dbContext.Contacts.Find(id);
+
+            if (exisitingContact == null)
+            {
+                return NotFound();
+            }
+
+            exisitingContact.Name = request.Name;
+            exisitingContact.Email = request.Email;
+            exisitingContact.PhoneNumber = request.PhoneNumber;
+            exisitingContact.Favorite = request.Favorite;
+
+            dbContext.SaveChanges();
+
+            return Ok(exisitingContact);
+        }
     }
 }

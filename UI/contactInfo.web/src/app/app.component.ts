@@ -16,6 +16,9 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
 export class AppComponent {
   http = inject(HttpClient);
 
+  isEditMode = false;
+  editingContactId: string | null = null;
+
   contactsForm = new FormGroup({
     name: new FormControl<string>(''),
     email: new FormControl<string | null>(null),
@@ -24,24 +27,37 @@ export class AppComponent {
   });
 
   contacts$ = this.getContacts();
+  
+onFormSubmit() {
+  const contactData = {
+    name: this.contactsForm.value.name,
+    email: this.contactsForm.value.email,
+    phoneNumber: this.contactsForm.value.phoneNumber,
+    favorite: this.contactsForm.value.favorite,
+  };
 
-  onFormSubmit() {
-    const addContactRequest = {
-      name: this.contactsForm.value.name,
-      email: this.contactsForm.value.email,
-      phoneNumber: this.contactsForm.value.phoneNumber,
-      favorite: this.contactsForm.value.favorite,
-    };
-
-    this.http.post('https://localhost:7117/api/Contacts', addContactRequest)
+  if (this.isEditMode && this.editingContactId) {
+    // Update existing contact
+    this.http.put(`https://localhost:7117/api/Contacts/${this.editingContactId}`, contactData)
     .subscribe({
-      next: (value) => {
-        console.log(value)
+      next: () => {
+        this.contacts$ = this.getContacts();
+        this.contactsForm.reset();
+        this.isEditMode = false;
+        this.editingContactId = null;
+      }
+    });
+  } else {
+    // Add new contact
+    this.http.post('https://localhost:7117/api/Contacts', contactData)
+    .subscribe({
+      next: () => {
         this.contacts$ = this.getContacts();
         this.contactsForm.reset();
       }
     });
   }
+}
 
   onDelete(id: string) {
     this.http.delete(`https://localhost:7117/api/Contacts/${id}`)
@@ -51,6 +67,24 @@ export class AppComponent {
         this.contacts$ = this.getContacts();
       }
     });
+  }
+
+  onEdit(contact: Contact) {
+    this.contactsForm.setValue({
+      name: contact.name,
+      email: contact.email,
+      phoneNumber: contact.phoneNumber,
+      favorite: contact.favorite
+    });
+
+    this.isEditMode = true;
+    this.editingContactId = contact.id;
+  }
+  
+  onCancelEdit() {
+    this.contactsForm.reset();
+    this.isEditMode = false;
+    this.editingContactId = null;
   }
 
   private getContacts(): Observable<Contact[]> {
