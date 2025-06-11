@@ -49,10 +49,19 @@
 
   <div class="overflow-y-auto h-screen p-4 w-[50%]">
     @if (contacts.length > 0) {
-      <div class="px-4 py-2">
+      <div class="px-4 py-2 flex gap-4 mb-2 justify-center">
+        <div>
+          <label class="font-semibold">Sort by:</label>
+          <select [(ngModel)]="sortBy" (change)="onSortChange()" 
+          class="ml-2 p-1 border rounded outline outline-gray-400">
+            <option value="">None</option>
+            <option value="name">First Name</option>
+          </select>
+        </div>
+
         <label class="flex items-center gap-2 font-semibold">
-          <input type="checkbox" [(ngModel)]="showFavoritesOnly" class="h-5 w-5">
           Show only favorites
+          <input type="checkbox" [(ngModel)]="showFavoritesOnly" class="h-5 w-5">
         </label>
       </div>
 

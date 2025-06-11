@@ -19,9 +19,16 @@ namespace ContactInfo.Controllers
 
 
         [HttpGet]
-        public IActionResult GetContacts()
+        public IActionResult GetContacts([FromQuery] string? sortBy = null)
         {
-            var contacts = dbContext.Contacts.ToList();
+            var contactsQuery = dbContext.Contacts.AsQueryable();
+
+            if (sortBy == "name")
+            {
+                contactsQuery = contactsQuery.OrderBy(c => c.Name);
+            }
+
+            var contacts = contactsQuery.ToList();
             return Ok(contacts);
         }
 

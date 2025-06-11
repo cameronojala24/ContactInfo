@@ -21,6 +21,8 @@ export class AppComponent {
   editingContactId: string | null = null;
   showFavoritesOnly = false;
 
+  sortBy = '';
+
   contacts: Contact[] = [];
 
   contactsForm = new FormGroup({
@@ -112,7 +114,15 @@ export class AppComponent {
     this.editingContactId = null;
   }
 
+  onSortChange() {
+    this.getContacts().subscribe(data => {
+      this.contacts = data;
+    });
+  }
+
   private getContacts(): Observable<Contact[]> {
-    return this.http.get<Contact[]>('https://localhost:7117/api/Contacts');
+    return this.http.get<Contact[]>('https://localhost:7117/api/Contacts', {
+      params: { sortBy: this.sortBy}
+    });
   }
 }
