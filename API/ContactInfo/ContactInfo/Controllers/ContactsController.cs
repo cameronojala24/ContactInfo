@@ -27,6 +27,10 @@ namespace ContactInfo.Controllers
             {
                 contactsQuery = contactsQuery.OrderBy(c => c.Name);
             }
+            else if (sortBy == "createdAt")
+            {
+                contactsQuery = contactsQuery.OrderBy(c => c.CreatedAt);
+            }
 
             var contacts = contactsQuery.ToList();
             return Ok(contacts);

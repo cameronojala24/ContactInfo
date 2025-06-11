@@ -119,6 +119,7 @@ export class AppComponent {
     this.getContacts().subscribe(data => {
       this.contacts = data;
     });
+    this.sortOrder = 'asc';
   }
 
   toggleSortOrder() {
