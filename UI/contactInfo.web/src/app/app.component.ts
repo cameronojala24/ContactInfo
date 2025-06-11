@@ -6,6 +6,9 @@ import { Contact } from '../models/contact.model';
 import { AsyncPipe } from '@angular/common';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -14,12 +17,11 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  http = inject(HttpClient);
-
   isEditMode = false;
   editingContactId: string | null = null;
-  
   showFavoritesOnly = false;
+
+  contacts: Contact[] = [];
 
   contactsForm = new FormGroup({
     name: new FormControl<string>(''),
@@ -28,7 +30,7 @@ export class AppComponent {
     favorite: new FormControl<boolean>(false)
   });
 
-  contacts: Contact[] = [];
+  constructor(private dialog: MatDialog, private http: HttpClient) {}
 
   ngOnInit() {
     this.getContacts().subscribe(data => {
@@ -76,12 +78,17 @@ export class AppComponent {
   }
 
   onDelete(id: string) {
-    this.http.delete(`https://localhost:7117/api/Contacts/${id}`)
-    .subscribe({
-      next: (value) => {
-        alert('Item deleted')
-        this.getContacts().subscribe(data => {
-            this.contacts = data;
+    const dialogRef = this.dialog.open(ConfirmDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.http.delete(`https://localhost:7117/api/Contacts/${id}`)
+        .subscribe({
+          next: (value) => {
+            this.getContacts().subscribe(data => {
+              this.contacts = data;
+            });
+          }
         });
       }
     });
