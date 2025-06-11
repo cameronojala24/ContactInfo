@@ -59,9 +59,14 @@
           </select>
         </div>
 
+        <button (click)="toggleSortOrder()" 
+        class="px-3 py-1 border rounded bg-gray-100 hover:bg-gray-200 w-[18%] font-semibold outline outline-gray-400">
+          {{ sortOrder === 'asc' ? '⬆️ Ascending' : '⬇️ Descending' }}
+        </button>
+
         <label class="flex items-center gap-2 font-semibold">
           Show only favorites
-          <input type="checkbox" [(ngModel)]="showFavoritesOnly" class="h-5 w-5">
+          <input type="checkbox" [(ngModel)]="showFavoritesOnly" class="h-7 w-7">
         </label>
       </div>
 

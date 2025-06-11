@@ -22,6 +22,7 @@ export class AppComponent {
   showFavoritesOnly = false;
 
   sortBy = '';
+  sortOrder: 'asc' | 'desc' = 'asc';
 
   contacts: Contact[] = [];
 
@@ -118,6 +119,11 @@ export class AppComponent {
     this.getContacts().subscribe(data => {
       this.contacts = data;
     });
+  }
+
+  toggleSortOrder() {
+    this.sortOrder = this.sortOrder === 'asc' ? 'desc' : 'asc';
+    this.contacts.reverse();
   }
 
   private getContacts(): Observable<Contact[]> {
